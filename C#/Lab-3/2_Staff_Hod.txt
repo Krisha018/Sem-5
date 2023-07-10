@@ -1,0 +1,199 @@
+using System;
+	
+public class Staff
+{
+	string Name;
+	string Post;
+	
+	public void getDetails()
+	{
+		Console.WriteLine("Enter a Name :");
+		this.Name=(Console.ReadLine());
+		Console.WriteLine("Enter a Post :");
+		this.Post=(Console.ReadLine());
+		
+		
+	}
+	public void displayDetails()
+	{
+		for(int i=0;i<4;i++)
+		{
+			if(Post=="HOD")
+			{
+				Console.WriteLine(Name);
+				Console.WriteLine(Post);
+				break;
+				
+			}
+		}
+		
+	}
+	
+}
+
+public class Program
+{
+	public static void Main()
+	{
+		Staff o1=new Staff();
+		Staff o2=new Staff();
+		Staff o3=new Staff();
+		Staff o4=new Staff();
+		Staff o5=new Staff();
+		
+		o1.getDetails();
+		o2.getDetails();
+		o3.getDetails();
+		o4.getDetails();
+		o5.getDetails();
+		
+		o1.displayDetails();
+		o2.displayDetails();
+		o3.displayDetails();
+		o4.displayDetails();
+		o5.displayDetails();
+		
+	}
+}
+
+
+
+
+----With Array----
+
+using System;
+
+
+namespace ConsoleApplication2
+{
+  public  class Program
+    {
+   public     static void Main(string[] args)
+        {
+            Staff[] s = new Staff[5];
+            for (int i =0;i<=4;i++)
+            {
+                s[i] = new Staff();
+                s[i].GetDetails();
+                s[i].DisplayDetails();
+            }
+        }
+    }
+
+                                                                                                          
+}
+public class Staff
+{
+    string name;
+    string post;
+
+    public void GetDetails()
+    {
+
+        Console.WriteLine("Enter name");
+        name = Console.ReadLine();
+        Console.WriteLine("Enter post");
+        post = Console.ReadLine();
+    }
+    public void DisplayDetails()
+    {
+        for(int i=0;i<=4;i++)
+        {
+            if(post=="hod")
+            {
+                Console.WriteLine(name);
+                Console.WriteLine(post);
+               
+                
+            }
+            break;
+        }
+   
+    }
+    
+
+
+}
+
+
+-----------lab-3(2)----------
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace L4
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            Staff[] st = new Staff[5];
+            for (int i = 0; i < 5; i++)
+            {
+                st[i] = new Staff();
+                st[i].GetDetail();
+               
+            }
+
+            for (int i = 0; i < 5; i++)
+            {
+                if (st[i].Designation == "HOD")
+                {
+                    st[i].Display();
+                }
+                
+            }
+        }
+
+
+    }
+
+
+    public class Staff
+    {
+
+        public string Name;
+        public string Department;
+        public string Designation;
+        public string Experience;
+        public double Salary;
+
+        public void GetDetail()
+        {
+
+            Console.WriteLine("Enter a Name:");
+            Name = Console.ReadLine();
+
+
+            Console.WriteLine("Enter a Department:");
+            Department = Console.ReadLine();
+
+
+            Console.WriteLine("Enter a Designation:");
+            Designation = Console.ReadLine();
+
+
+            Console.WriteLine("Enter a Experience:");
+            Experience = Console.ReadLine();
+
+            Console.WriteLine("Enter a Salary:");
+            Salary = double.Parse(Console.ReadLine());
+
+        }
+
+        public void Display()
+        {
+
+            Console.WriteLine("Name:" + Name);
+            Console.WriteLine("Salary:" + Salary);
+
+
+        }
+
+    }
+
+}

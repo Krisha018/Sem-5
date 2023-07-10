@@ -1,0 +1,36 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Lab_3
+{
+   public class Distance
+    {
+         double D1;
+         double D2;
+         double D3;
+
+        public Distance()
+        {
+            D1 = 100;
+            D2 = 200;
+        }
+
+        public double calculateDistance()
+        {
+            D3 = D2 + D1;
+            return D3;
+        }
+    }
+ public   class DistanceData
+    {
+     public   static void Main(string[] args)
+        {
+            Distance d = new Distance();
+            Console.WriteLine("Total Distance : " + d.calculateDistance());
+
+        }
+    }
+}

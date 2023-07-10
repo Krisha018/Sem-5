@@ -1,0 +1,55 @@
+using System;
+
+
+namespace ConsoleApplication7
+{
+   public class Program
+    {
+      public  static void Main(string[] args)
+        {
+            Console.WriteLine("Enter a Basic:");
+            double Basic = double.Parse(Console.ReadLine());
+
+            Console.WriteLine("Enter a TA:");
+            double TA = double.Parse(Console.ReadLine());
+            double DA = 14;
+            double HRA = 78;
+
+            Salary s = new Salary(TA, DA, HRA, Basic);
+
+
+           // double Salary = TA + DA + Basic + HRA;
+            s.DisplaytDetails();
+        }
+    }
+
+    public class Salary
+    {
+
+        double TA;
+        double DA;
+         double HRA;
+        double salary;
+        double Basic;
+
+        public Salary(double TA, double DA, double HRA, double Basic)
+        {
+            this.DA = DA;
+            this.HRA = HRA;
+            this.Basic = Basic;
+            this.TA = TA;
+
+        }
+
+
+        public void DisplaytDetails()
+        {
+            salary = TA + DA + Basic + HRA;
+            Console.WriteLine("Salary :" + salary);
+
+
+        }
+
+
+    }
+}

@@ -1,0 +1,35 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Lab_3
+{
+ public   class Area
+    {
+         double length;
+         double breath;
+
+        public Area(double length, double breath)
+        {
+            this.length = length;
+            this.breath = breath;
+        }
+
+        public void displayData()
+        {
+            Console.WriteLine("Length : " + length + " Breath : " + breath + " Area : " + (length * breath));
+        }
+    }
+  public  class AreaData
+    {
+     public   static void Main(string[] args)
+        {
+
+            Area a = new Area(10, 2);
+            a.displayData();
+
+        }
+    }
+}

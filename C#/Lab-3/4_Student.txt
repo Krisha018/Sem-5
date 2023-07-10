@@ -1,0 +1,101 @@
+using System;
+
+
+public class Student
+{
+    int Enrollment_No;
+    string Student_Name;
+    int Semester;
+    int CPI;
+    int SPI;
+
+
+   
+
+    public void getStudentsDetails()
+    {
+        Console.WriteLine("Enter a Enrollment_No :");
+        this.Enrollment_No = int.Parse(Console.ReadLine());
+        Console.WriteLine("Enter a Student_Name :");
+        this.Student_Name = (Console.ReadLine());
+        Console.WriteLine("Enter a Semester :");
+        this.Semester = int.Parse(Console.ReadLine());
+        Console.WriteLine("Enter a CPI :");
+        this.CPI = int.Parse(Console.ReadLine());
+        Console.WriteLine("Enter a SPI :");
+        this.SPI = int.Parse(Console.ReadLine());
+    }
+
+    public void displayStudentDetails()
+    {
+        Console.WriteLine("Enrollment_No :" + Enrollment_No);
+        Console.WriteLine("Student_Name :" + Student_Name);
+        Console.WriteLine("Semester :" + Semester);
+        Console.WriteLine("CPI :" + CPI);
+        Console.WriteLine("SPI:" + SPI);
+    }
+}
+  public  class Program
+    {
+    public    static void Main(string[] args)
+        {
+            Student obj = new Student();
+            obj.getStudentsDetails();
+            obj.displayStudentDetails();
+        }
+    }
+
+
+
+
+----using constructor----
+
+using System;
+
+public class Student
+{
+    int Enrollment_No;
+    string Student_Name;
+    int Semester;
+    int CPI;
+    int SPI;
+
+
+    public Student(int Enrollment_No, string Student_Name, int Semester, int CPI, int SPI)
+    {
+        this.Enrollment_No=Enrollment_No ;
+        this.Student_Name=Student_Name;
+        this.Semester = Semester;
+        this.CPI = CPI;
+        this.SPI = SPI;
+    }
+
+    public void DisplayAccountDetails()
+    {
+        Console.WriteLine("Enrollment_No :" + Enrollment_No);
+        Console.WriteLine("Student_Name :" + Student_Name);
+        Console.WriteLine("Semester :" + Semester);
+        Console.WriteLine("CPI :" + CPI);
+        Console.WriteLine("SPI :" + SPI);
+    }
+
+}
+
+public class Program
+{
+    public static void Main()
+    {
+        Console.WriteLine("Enter Enrollment_No");
+         int Enrollment_No=int.Parse(Console.ReadLine());
+         Console.WriteLine("Enter Student_Name");
+         string Student_Name = (Console.ReadLine());
+         Console.WriteLine("Enter Semester");
+         int Semester = int.Parse(Console.ReadLine());
+         Console.WriteLine("Enter CPI");
+         int CPI = int.Parse(Console.ReadLine());
+         Console.WriteLine("Enter SPI");
+         int SPI = int.Parse(Console.ReadLine());
+         Student obj = new Student(Enrollment_No, Student_Name, Semester, CPI, SPI);
+        obj.DisplayAccountDetails();
+    }
+}
